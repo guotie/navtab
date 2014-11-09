@@ -47,7 +47,7 @@ var NavApp = React.createClass({
       tabitems = [];
 
     for (var i = 0; i < tabs.length; i ++) {
-      tabitems.push(<TabItem tab={tabs[i]} />);
+      tabitems.push(<TabItem key={i} tab={tabs[i]} />);
     }
   	return (
       <nav className='bar bar-tab'>{tabitems}</nav>

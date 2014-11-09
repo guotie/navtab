@@ -16,7 +16,7 @@ var cx = require('react/lib/cx');
 var TabItem = React.createClass({
 
   propTypes: {
-   todo: ReactPropTypes.object.isRequired
+   tab: ReactPropTypes.object.isRequired
   },
 
   getInitialState: function() {

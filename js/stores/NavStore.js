@@ -79,11 +79,7 @@ AppDispatcher.register(function(payload) {
   switch(action.actionType) {
 
     case NavConstants.Nav_UPDATE_ACTIVE:
-      if (TodoStore.areAllComplete()) {
-        updateAll({complete: false});
-      } else {
-        updateAll({complete: true});
-      }
+
       break;
 
     default:
