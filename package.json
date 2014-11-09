@@ -1,0 +1,44 @@
+{
+  "name": "navtab",
+  "version": "0.1.0",
+  "description": "a nav tab example for learn react",
+  "main": "js/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/guotie/navtab"
+  },
+  "keywords": [
+    "nav-tab",
+    "nav",
+    "tab",
+    "react"
+  ],
+  "dependencies": {
+    "flux": "^2.0.0",
+    "object-assign": "^1.0.0",
+    "react": "^0.12.0"
+  },
+  "devDependencies": {
+    "browserify": "^6.2.0",
+    "envify": "^3.0.0",
+    "jest-cli": "~0.1.17",
+    "reactify": "^0.15.2",
+    "uglify-js": "~2.4.15",
+    "watchify": "^2.1.1"
+  },
+  "browserify": {
+    "transform": [
+      "reactify",
+      "envify"
+    ]
+  },
+  "author": "guotie",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/guotie/navtab/issues"
+  },
+  "homepage": "https://github.com/guotie/navtab"
+}
