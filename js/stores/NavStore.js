@@ -19,37 +19,29 @@ var CHANGE_EVENT = 'change';
 var _tabs = [
 {
   name: "首页", 
-  href: "/", 
+  href: "#", 
   icon: "icon icon-home",
   active: true
  },
  {
   name: "订单", 
-  href: "/orders", 
+  href: "#", 
   icon: "icon icon-list",
   active: false
  },
  {
   name: "论坛", 
-  href: "/forum", 
+  href: "#", 
   icon: "icon icon-star-filled",
   active: false
  },
  {
   name: "我的", 
-  href: "/my", 
+  href: "#", 
   icon: "icon icon-person",
   active: false
  }
 ];
-
-/**
- * Update a Tab item.
- * @param  {string} tab
- */
-function updateActive(tab) {
-  _todos[id] = assign({}, _todos[id], updates);
-}
 
 var NavStore = assign({}, EventEmitter.prototype, {
   /**
