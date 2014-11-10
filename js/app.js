@@ -11,6 +11,7 @@ var React = require('react');
 
 var NavTabApp = require('./components/NavApp.react');
 
+React.initializeTouchEvents(true);
 React.render(
   <NavTabApp />,
   document.getElementById('app-navtab')

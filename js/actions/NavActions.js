@@ -17,14 +17,11 @@ var NavActions = {
    * Toggle whether a single ToDo is complete
    * @param  {object} todo
    */
-  activeTab: function(tab) {
-    var href = tab.href;
-    if (tab.active) {
-      AppDispatcher.handleViewAction({
-        activeType: NavConstants.TAB_ACTIVED,
-        href: tab.href
-      })
-    }
+  activeTab: function(tabIdx) {
+    AppDispatcher.handleViewAction({
+      actionType: NavConstants.TAB_ACTIVED,
+      idx: tabIdx
+    })
   }
 };
 

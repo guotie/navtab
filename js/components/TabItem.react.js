@@ -19,12 +19,6 @@ var TabItem = React.createClass({
    tab: ReactPropTypes.object.isRequired
   },
 
-  getInitialState: function() {
-    return {
-      isActive: this.props.active || false
-    };
-  },
-
   /**
    * @return {object}
    */
@@ -40,15 +34,11 @@ var TabItem = React.createClass({
       <a className={cx({
         'tab-item': true,
         'active': tab.active
-      })} href={tab.href} onClick={this._onClick}>
+      })} href={tab.href} data-tab-index={tab.idx}>
         <span className={tab.icon}></span>
         <span className="tab-label">{tab.name}</span>
       </a>
     );
-  },
-
-  _onClick: function() {
-    this.setState({isActive: true});
   }
 });
 

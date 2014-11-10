@@ -10,5 +10,5 @@
  */
 
 module.exports = {
-	TAB_ACTIVED: 'TAG_ACTIVED'
+	TAB_ACTIVED: 'TAB_ACTIVED'
 }

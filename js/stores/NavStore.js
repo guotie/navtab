@@ -18,30 +18,36 @@ var CHANGE_EVENT = 'change';
 
 var _tabs = [
 {
+  idx: 0,
   name: "首页", 
   href: "#", 
   icon: "icon icon-home",
   active: true
  },
  {
+  idx: 1,
   name: "订单", 
   href: "#", 
   icon: "icon icon-list",
   active: false
  },
  {
+  idx: 2,
   name: "论坛", 
   href: "#", 
   icon: "icon icon-star-filled",
   active: false
  },
  {
+  idx: 3,
   name: "我的", 
   href: "#", 
   icon: "icon icon-person",
   active: false
  }
 ];
+
+var _activedIdx = 0;
 
 var NavStore = assign({}, EventEmitter.prototype, {
   /**
@@ -50,6 +56,10 @@ var NavStore = assign({}, EventEmitter.prototype, {
    */
   getAll: function() {
     return _tabs;
+  },
+
+  getCurrentActiveIndex: function() {
+    return _activedIdx;
   },
 
   emitChange: function() {
@@ -74,12 +84,18 @@ var NavStore = assign({}, EventEmitter.prototype, {
 // Register to handle all updates
 AppDispatcher.register(function(payload) {
   var action = payload.action;
-  var text;
+  var newIdx;
 
   switch(action.actionType) {
+    case NavConstants.TAB_ACTIVED:
+      newIdx = action.idx;
 
-    case NavConstants.Nav_UPDATE_ACTIVE:
+      if (newIdx === _activedIdx) return;
+      if (newIdx >= _tabs.length) return;
 
+      _tabs[newIdx].active = true;
+      _tabs[_activedIdx].active = false;
+      _activedIdx = newIdx;
       break;
 
     default:
